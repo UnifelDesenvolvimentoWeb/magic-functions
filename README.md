@@ -1,6 +1,6 @@
 
 # Repositório do projeto Magic Functions!
-	
+
 Desenvolva seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para enviar seus códigos.
 
 	
@@ -46,6 +46,9 @@ Desenvolva seu projeto a partir deste repositório, utilizando uma branch espec�
 5. Adicione a sua branch com o novo `commit` ao repositório remoto
 
 	* Usando o exemplo anterior: `git push -u origin maria-magic-functions`
+
+
+**Atenção: essa etapa de PR só executa uma vez**
 
 6. Crie um novo `Pull Request`  _(PR)_
 	* Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/UnifelDesenvolvimentoWeb/magic-functions/pulls)
