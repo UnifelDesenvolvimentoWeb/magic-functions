@@ -11,27 +11,27 @@ Desenvolva seu projeto a partir deste repositório, utilizando uma branch espec�
 
 1. Clone o repositório
 
-	*  Use o comando: `git clone git@github.com:tryber/sd-023-a-project-zoo-functions.git`
+	*  Use o comando: `git clone git@github.com:UnifelDesenvolvimentoWeb/magic-functions.git`
 
 * Entre na pasta do repositório que você acabou de clonar:
 
-	*  `cd sd-023-a-project-zoo-functions`
+	*  `cd magic-functions`
 
 2. Instale as dependências
 
 	* Para isso, use o seguinte comando: `npm install`
 
-3. Crie uma branch a partir da branch `main`
+3. Crie uma branch a partir da branch `master`
 
-	* Verifique se você está na branch `main`
+	* Verifique se você está na branch `master`
 	  * Exemplo: `git branch`
-	* Se não estiver, mude para a branch `main`
-	  * Exemplo: `git checkout main`
+	* Se não estiver, mude para a branch `master`
+	  * Exemplo: `git checkout master`
 	* Agora, crie uma branch para qual você vai submeter os `commits` do seu projeto:
 		* Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-		* Exemplo: `git checkout -b luiza-zoo-functions-project`
+		* Exemplo: `git checkout -b maria-magic-functions`
 
-4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+4. Desenvolva algum requisito do projeto e logo em seguida adicione as mudanças ao _stage_ do Git e faça um `commit`
 	* Verifique que as mudanças ainda não estão no _stage_
 	  * Exemplo: `git status` (os arquivos no diretório `src` devem aparecer em vermelho)
 
@@ -40,23 +40,22 @@ Desenvolva seu projeto a partir deste repositório, utilizando uma branch espec�
 	  *  `git status` (deve aparecer listado os arquivos do diretório `src` em verde)
 
 	* Faça o `commit` inicial
-	  * Exemplo: `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
+	  * Exemplo: `git commit -m 'iniciando o projeto - requisito 01.'` (fazendo o primeiro commit)
 	*  `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
 5. Adicione a sua branch com o novo `commit` ao repositório remoto
 
-	* Usando o exemplo anterior: `git push -u origin luiza-zoo-functions-project`
+	* Usando o exemplo anterior: `git push -u origin maria-magic-functions`
 
 6. Crie um novo `Pull Request`  _(PR)_
-	* Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-023-a-project-zoo-functions/pulls)
+	* Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/UnifelDesenvolvimentoWeb/magic-functions/pulls)
 	* Clique no botão verde _"New pull request"_
 	* Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
 	* Coloque um título para o seu _Pull Request_
     * Exemplo: _"Cria tela de busca"_
 	* Clique no botão verde _"Create pull request"_
 	* Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-	*  **Não se preocupe em preencher mais nada por enquanto!**
-	* Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-023-a-project-zoo-functions/pulls) e confira que o seu _Pull Request_ está criado.
+	* Volte até a [página de _Pull Requests_ do repositório](https://github.com/UnifelDesenvolvimentoWeb/magic-functions/pulls) e confira que o seu _Pull Request_ está criado.
 	
 </details>
 	
