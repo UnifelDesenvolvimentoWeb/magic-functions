@@ -3,7 +3,6 @@
 
 Desenvolva seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para enviar seus códigos.
 
-	
 # Orientações
 	
 <details>
