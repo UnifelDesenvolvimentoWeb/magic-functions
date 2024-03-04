@@ -1,7 +1,7 @@
 const movies = require("../data/movies");
 
 const getAllTitles = (movies) => {
-
+ 
   if (!Array.isArray(movies) || movies.length === 0) {
     return [];
   }
@@ -10,6 +10,7 @@ const getAllTitles = (movies) => {
 
   return titles;
 }
+
 
 module.exports = {
   getAllTitles
