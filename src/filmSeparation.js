@@ -1,6 +1,10 @@
 const movies = require("../data/movies");
 
 function filmSeparation(movies, details = true) {
+
+  
+
+
  
 }
 
