@@ -1,8 +1,10 @@
 const movies = require("../data/movies");
+
+
 function averageRatingByGenre(genero) {
-
+ 
 }
-
-module.exports = { 
+console.log(averageRatingByGenre());
+module.exports = {  
   averageRatingByGenre
-}
+} 
