@@ -11,7 +11,6 @@ const getAllTitles = (movies) => {
   return titles;
 }
 
-
 module.exports = {
   getAllTitles
 }
