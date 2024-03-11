@@ -1,40 +1,46 @@
 const movies = require("../data/movies");
 
 function filmSeparation(movies, details = true) {
-  const filmPorgenero = {}
-  let listaGeneros = []
-  
-  for(movie of movies){
-    for(i of movie.genero){
-      if(!listaGeneros.includes(i)){
-        listaGeneros.push(i)
-        let lis = movies.filter((item) => item.genero.includes(i))
-        lis.sort()
-        
-        let SoTitulo = lis.map((item) => item.titulo)
-        SoTitulo.sort()
-        
-        if(details){
-          filmPorgenero[i] = lis
-        }
-        else{
-          filmPorgenero[i] = SoTitulo
+ const filmPorgenero = {};
 
+  for (const movie of movies) {
+    if (movie.genero?.length > 0) {
+      for (const genre of movie.genero) {
+        if (filmPorgenero[genre] === undefined) {
+          filmPorgenero[genre] = [];
         }
+        const itemDoArray = details ? {
+          anoLancamento: movie.anoLancamento,
+          avaliacao: movie.avaliacao,
+          diretor: movie.diretor,
+          id: movie.id,
+          titulo: movie.titulo
+        } : movie.titulo;
+        filmPorgenero[genre].push(itemDoArray);
       }
-      
     }
   }
+  const filmOrder = {}
+  const generosOrder = Object.keys(filmPorgenero).sort();
+  for (const genero of generosOrder) {
+    filmOrder[genero] = details ? filmPorgenero[genero].sort((a, b) => {
+      const titleA = a.titulo.toUpperCase(); 
+      const titleB = b.titulo.toUpperCase(); 
 
-
-
-
-return filmPorgenero
-  
+      if (titleA < titleB) {
+          return -1;
+      }
+      if (titleA > titleB) {
+          return 1;
+      }
+      return 0; 
+  }) : filmPorgenero[genero].sort();
+  }
+  return filmOrder
 
 }
 console.log(filmSeparation(movies))
-//filmSeparation(movies)
+
 module.exports = {
   filmSeparation
 }
