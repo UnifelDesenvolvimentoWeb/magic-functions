@@ -64,7 +64,7 @@ const list1 = [
   },
   {
     id: 3,
-    titulo: "Matrix",
+    titulo: " ",
     diretor: "Lana Wachowski, Lilly Wachowski",
     genero: ["Ficção Científica", "Ação"],
     anoLancamento: 1999,
