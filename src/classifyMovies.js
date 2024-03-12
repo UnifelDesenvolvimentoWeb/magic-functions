@@ -1,21 +1,17 @@
 const movies = require("../data/movies");
 
 function classifyMovies(movies) {
-  let obj = {
-    avaliacao : {
+  
+    let avaliacao = {
     "0-4.9" : [],
     "5.0-7.9": [],
     "8.0-10.0" : [],
-    },
-    disponibilidade : {
+    }
+    let disponibilidade = {
       disponiveis : [],
       naoDisponiveis: []
-    
     }
-  }
   
-  
-
   movies.forEach(element => {
     let film = {
       titulo: element.titulo,
@@ -27,56 +23,29 @@ function classifyMovies(movies) {
     let objDispo = {
       titulo: element.titulo
     }
-    if ((element.avaliacao > 0) && (element.avaliacao < 4.9) ) {
-      obj.avaliacao["0-4.9"].push(film)
-    }else if((element.avaliacao < 7.9) ) {
-      obj.avaliacao["5.0-7.9"].push(film)
+    if ((element.avaliacao > 0) && (element.avaliacao < 5) ) {
+      avaliacao["0-4.9"].push(film)
+    }else if((element.avaliacao < 8) ) {
+      avaliacao["5.0-7.9"].push(film)
     }else if ((element.avaliacao <= 10)){
-      obj.avaliacao["8.0-10.0"].push(film)
+      avaliacao["8.0-10.0"].push(film)
     }
 
-    element.disponivel ? obj.disponibilidade.disponiveis.push(objDispo) :
-    obj.disponibilidade.naoDisponiveis.push(objDispo)
+    if (element.disponivel) {
+      disponibilidade.disponiveis.push(objDispo);
+    } else {
+      disponibilidade.naoDisponiveis.push(objDispo);
+    }
       
   })
 
-const ajuste = obj.avaliacao["5.0-7.9"].sort((a , b) =>{
-  const titleA = a.titulo.toUpperCase(); 
-  const titleB = b.titulo.toUpperCase(); 
-      if (titleA < titleB) {
-          return -1;
-      }
-      if (titleA > titleB) {
-          return 1;
-      }
-      return 0;  
-})
-const oganizaAliacao = obj.avaliacao["8.0-10.0"].sort((a , b) =>{
-  const titleA = a.titulo.toUpperCase(); 
-  const titleB = b.titulo.toUpperCase(); 
-      if (titleA < titleB) {
-          return -1;
-      }
-      if (titleA > titleB) {
-          return 1;
-      }
-      return 0;  
-})
-const organizaAvaliacao3 = obj.avaliacao["0-4.9"].sort((a , b) =>{
-  const titleA = a.titulo.toUpperCase(); 
-  const titleB = b.titulo.toUpperCase(); 
-      if (titleA < titleB) {
-          return -1;
-      }
-      if (titleA > titleB) {
-          return 1;
-      }
-      return 0;  
-})
-  for(f of obj.avaliacao["8.0-10.0"]){
+  avaliacao["0-4.9"].sort((a, b) => a.titulo.toUpperCase() > b.titulo.toUpperCase() ? 1 : -1);
+  avaliacao["5.0-7.9"].sort((a, b) => a.titulo.toUpperCase() > b.titulo.toUpperCase() ? 1 : -1);
+  avaliacao["8.0-10.0"].sort((a, b) => a.titulo.toUpperCase() > b.titulo.toUpperCase() ? 1 : -1);
+  for(f of avaliacao["5.0-7.9"]){
     console.log(f);
   }
-  return obj
+  return {avaliacao, disponibilidade}
 }
 classifyMovies(movies)
 module.exports = {
