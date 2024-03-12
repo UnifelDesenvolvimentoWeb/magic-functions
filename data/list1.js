@@ -99,7 +99,7 @@ const list1 = [
       localizacao: "Wellington, Nova Zelândia"
     },
     duracao: 178,
-    elenco: ["Elijah Wood", "Ian McKellen", "Viggo Mortensen"],
+    elenco: ["Elijah Wood", "Leigh Whannell", "Viggo Mortensen"],
     avaliacao: 8.9,
     disponivel: true,
     emprestimos: [
