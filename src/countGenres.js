@@ -7,7 +7,7 @@ function countGenres(movies) {
    return genresCount
 }
   movies.forEach((movie) => {
-    if (movie.genero && movie.genero.lenght >0) {
+    if (movie.genero && movie.genero.length >0) {
       movie.genero.forEach((genre) => {
         if (genresCount.hasOwnProperty(genre)) {
           genresCount[genre]++
