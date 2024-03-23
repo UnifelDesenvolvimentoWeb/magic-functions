@@ -1,9 +1,12 @@
-const movies = require("../data/movies");
+const filmsAvailable = ( movies ) =>
+{
+  const availableFilms = movies.filter( ( film ) => film.disponivel );
 
-const filmsAvailable = (movies) => {
- 
-}
+  const availableFilmTitles = availableFilms.map( ( film ) => film.titulo );
+
+  return availableFilmTitles;
+};
 
 module.exports = {
   filmsAvailable
-}
+};
