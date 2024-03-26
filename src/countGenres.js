@@ -2,7 +2,7 @@ const movies = require("../data/movies");
 
 function countGenres(movies) {
   return movies.reduce((acc, movie)=>{
-    movie.genero.forEach(gen => {
+    movie.genero.forEach((gen) => {
       if (acc[gen]) {
         acc[gen] += 1
       } else {
