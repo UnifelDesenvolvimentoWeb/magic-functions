@@ -1,7 +1,7 @@
 const movies = require('../data/movies');
 
 function getMovieById(id) {
-  if (typeof id !== 'number' || isNaN(id)) {
+  if (!id || isNaN(id)) {
     return undefined;
   }
 
