@@ -6,3 +6,5 @@ function averageRatingByGenre(genero) {
 module.exports = { 
   averageRatingByGenre
 }
+
+Teste 1
