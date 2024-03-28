@@ -112,11 +112,11 @@ const list1 = [
   },
   {
     id: 5,
-    titulo: "Tropa de Elite",
+    titulo: "Tropa de Elitee",
     diretor: "José Padilha",
     genero: ["Ação", "Drama"],
     anoLancamento: 2007,
-    paisOrigem: "Brasil",
+    paisOrigem: "Brsil",
     idiomaOriginal: "Português",
     estudio: {
       nome: "Zazen Produções",
@@ -339,6 +339,8 @@ const list1 = [
     ]
   },
 ];
+
+
 
 module.exports = {
   list1
