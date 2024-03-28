@@ -10,7 +10,7 @@ const n = movies.filter ((movie) => movie.elenco.includes (ator))
 return n;
 }
 
-console.log( moviesWithActor(""));
+console.log( moviesWithActor("Chadwick Boseman"));
 
 module.exports = {
   moviesWithActor
