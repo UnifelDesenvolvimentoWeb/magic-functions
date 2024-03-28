@@ -11,7 +11,7 @@ const titlesAndDirectors = (movies) => {
   }
   for (const movie of movies) {
     if (!movie.titulo || !movie.diretor) {
-      console.warn(`Dados do filme incompletos para: ${movie.title}`);
+      console.warn(`Movie data incomplete for: ${movie.title}`);
       continue; 
     }
 
