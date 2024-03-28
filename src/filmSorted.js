@@ -1,8 +1,8 @@
 const movies = require("../data/movies");
 
 const filmSorted = (movies) => {
-  
-  return movies.toSorted((a,b) => a.anoLancamento - b.anoLancamento)
+  let moviesCopy = [...movies];
+  return moviesCopy.sort((a,b) => a.anoLancamento - b.anoLancamento);
 }
 
 module.exports = {

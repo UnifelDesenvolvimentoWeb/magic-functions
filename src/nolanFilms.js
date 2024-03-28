@@ -6,7 +6,7 @@ const nolanFilms = (movies) => {
     if(movie.diretor.includes("Nolan")) {nolanMovies.push(movie)};
   })
 
-  return nolanMovies.toSorted((a,b) => {a.avaliacao - b.avaliacao});
+  return nolanMovies.sort((a,b) => {a.avaliacao - b.avaliacao});
 }
 
 module.exports = {

@@ -1,7 +1,8 @@
 const movies = require("../data/movies");
 
 function classifyMovies(movies) {
-    let sortedMovies = movies.toSorted((a,b) => a.titulo.localeCompare(b.titulo)) 
+    let moviesCopy = [...movies]
+    let sortedMovies = moviesCopy.sort((a,b) => a.titulo.localeCompare(b.titulo)) 
     let avaliacao = {"0-4.9": [], "5.0-7.9": [], "8.0-10.0": []}
     let disponibilidade = {disponiveis: [], naoDisponiveis: []}
 
